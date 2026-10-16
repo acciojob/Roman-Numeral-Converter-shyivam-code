@@ -15,7 +15,7 @@ function convertToRoman(num) {
     I: 1
 };
 let result=''
-for (let key of obj){
+for (let key in obj){
 	if(num>=obj[key]){
 		result+=key.repeat(Math.trunc(num/obj[key]))
 		num-=obj[key]*Math.trunc(num/obj[key])
